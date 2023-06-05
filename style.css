@@ -1,0 +1,189 @@
+display -moz-box {
+  display: -ms-flex;
+  display: flex;
+}
+.camera-container .circle {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 120%, #ddd, #fff 80%, #000 100%);
+  border-radius: 50%;
+  box-shadow: 8px 8px 15px #000;
+  height: 70px;
+  width: 70px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+.camera-container .circle .top {
+  background-repeat: no-repeat;
+  background-postion: center;
+  background-size: contain;
+  height: 45px;
+  width: 84px;
+  z-index: 2;
+  position: absolute;
+  top: -12px;
+  left: -7px;
+}
+.camera-container .circle .camera-eye {
+  -webkit-animation: camera 8s infinite linear;
+  -moz-animation: camera 8s infinite linear;
+  o-animation: camera 8s infinite linear;
+  animation: camera 8s infinite linear;
+  background: linear-gradient(45deg, #222, #444 30%, #444 35%, #222);
+  border-radius: 50%;
+  height: 42px;
+  margin: 10px 0 0 0;
+  width: 42px;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+.camera-container .circle .camera-eye .inner-eye {
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: radial-gradient(circle, #111 30%, rgba(255,255,255,0.7));
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+}
+.camera-container .circle .camera-eye .inner-eye .blinking {
+  -webkit-animation: colour 2s infinite linear;
+  -moz-animation: colour 2s infinite linear;
+  o-animation: colour 2s infinite linear;
+  animation: colour 2s infinite linear;
+  border: 3px dotted #93d3ed;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+body {
+  background: #05a7d8;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  padding: 40px 60px;
+  margin: 0;
+}
+@-moz-keyframes colour {
+  0% {
+    border: 3px dotted #93d3ed;
+  }
+  65% {
+    border: 3px dotted #93d3ed;
+  }
+  68% {
+    border: 3px dotted #f00;
+  }
+  75% {
+    border: 3px dotted #93d3ed;
+  }
+}
+@-webkit-keyframes colour {
+  0% {
+    border: 3px dotted #93d3ed;
+  }
+  65% {
+    border: 3px dotted #93d3ed;
+  }
+  68% {
+    border: 3px dotted #f00;
+  }
+  75% {
+    border: 3px dotted #93d3ed;
+  }
+}
+@-o-keyframes colour {
+  0% {
+    border: 3px dotted #93d3ed;
+  }
+  65% {
+    border: 3px dotted #93d3ed;
+  }
+  68% {
+    border: 3px dotted #f00;
+  }
+  75% {
+    border: 3px dotted #93d3ed;
+  }
+}
+@keyframes colour {
+  0% {
+    border: 3px dotted #93d3ed;
+  }
+  65% {
+    border: 3px dotted #93d3ed;
+  }
+  68% {
+    border: 3px dotted #f00;
+  }
+  75% {
+    border: 3px dotted #93d3ed;
+  }
+}
+@-moz-keyframes camera {
+  0% {
+    transform: none;
+  }
+  30% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  65% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  90% {
+    transform: none;
+  }
+}
+@-webkit-keyframes camera {
+  0% {
+    transform: none;
+  }
+  30% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  65% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  90% {
+    transform: none;
+  }
+}
+@-o-keyframes camera {
+  0% {
+    transform: none;
+  }
+  30% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  65% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  90% {
+    transform: none;
+  }
+}
+@keyframes camera {
+  0% {
+    transform: none;
+  }
+  30% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  65% {
+    transform: translateX(-12px) translateY(5px) skewX(25deg) skewY(-3deg) scale(0.78);
+  }
+  90% {
+    transform: none;
+  }
+}
